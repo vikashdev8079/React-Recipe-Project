@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import RecipeCard from "../Components/RecipeCard";
-
 function Home() {
   const [recipes, setRecipes] = useState([]);
   const [total, setTotal] = useState(0);
@@ -39,9 +38,9 @@ function Home() {
     let query = form.get("query").trim();
     setSearchQuery(query);
 
-    if (query) {
+    // if (query) {
       fetchRecipes(0, query);
-    }
+    // }
   }
 
   if (errorMsg) {
